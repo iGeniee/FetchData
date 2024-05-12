@@ -4,7 +4,7 @@ import React, {useState,useEffect} from 'react'
 function App() {
   const [data, setData] = useState([])
   useEffect(()=>{
-    fetch('')
+    fetch('http://localhost:8081/reviews')
     .then(res => res.json())
     .then (data => setData(data))
     .catch(err => console.log(err));
